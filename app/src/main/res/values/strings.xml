@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Auth</string>
+    <string name="log_in">Log in</string>
+    <string name="please_fill_the_details_and_log_in">Please fill the details and Log in</string>
+    <string name="password">Password</string>
+    <string name="you_don_t_have_an_account">You don’t have an account?</string>
+    <string name="create_account">Create Account</string>
+    <string name="personal_details">Personal details</string>
+    <string name="input_text_here">Input text here</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname*</string>
+    <string name="confirm">Confirm</string>
+</resources>
