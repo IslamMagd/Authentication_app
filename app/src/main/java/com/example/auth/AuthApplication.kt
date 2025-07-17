@@ -1,6 +1,8 @@
 package com.example.auth
 
 import android.app.Application
+import com.example.auth.di.appModules
+import com.example.auth.di.countryPickerModule
 import com.example.auth.di.loginModule
 import com.example.auth.di.signUpModule
 import org.koin.android.ext.koin.androidContext
@@ -12,7 +14,7 @@ class AuthApplication: Application() {
         super.onCreate()
         startKoin {
             androidContext(this@AuthApplication)
-            modules(loginModule, signUpModule)
+            modules(appModules)
         }
     }
 }
