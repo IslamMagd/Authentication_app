@@ -92,17 +92,6 @@ class SignUpViewModelTest {
         assertThat(viewModel.effect.first()).isInstanceOf(SignUpEffect.NavigateToSelectCountry::class.java)
     }
 
-//    @Test
-//    fun `given invalid phoneNumber then navigate to SelectCountry screen`() = runTest {
-//        Mockito.`when`(validatePhoneNumberUseCase(Mockito.anyString())).then {
-//            ValidationResult.Error("any")
-//        }
-//
-//        viewModel.handleEvent(SignUpIntent.SubmitSignUp)
-//
-//        assertThat(viewModel.effect.first()).isInstanceOf(SignUpEffect.NavigateToSelectCountry::class.java)
-//    }
-
     @Test
     fun `given invalid phone number then phone error should not be empty`() = runTest {
         Mockito.`when`(validatePhoneNumberUseCase(Mockito.anyString())).thenReturn(
@@ -124,27 +113,5 @@ class SignUpViewModelTest {
 
         assertThat(viewModel.state.value.emailError).isNotEmpty()
     }
-
-//    @Test
-//    fun `given invalid name then name error should not be empty`() = runTest {
-//        Mockito.`when`(validateNameUseCase(Mockito.anyString())).thenReturn(
-//            ValidationResult.Error("Invalid name")
-//        )
-//
-//        viewModel.handleEvent(SignUpIntent.SubmitSignUp)
-//
-//        assertThat(viewModel.state.value.name).isNotEmpty()
-//    }
-//
-//    @Test
-//    fun `given invalid surname then surname error should not be empty`() = runTest {
-//        Mockito.`when`(validateNameUseCase(Mockito.anyString())).thenReturn(
-//            ValidationResult.Error("Invalid surname")
-//        )
-//
-//        viewModel.handleEvent(SignUpIntent.SubmitSignUp)
-//
-//        assertThat(viewModel.state.value.surName).isNotEmpty()
-//    }
 
 }

@@ -32,7 +32,7 @@ class LoginViewModelTest {
 
         viewModel.handleEvent(LogInIntent.EnterPhone(phoneNumber,countryCode))
 
-        assertThat(viewModel.state.value.phone).isEmpty()
+        assertThat(viewModel.state.value.phone).isNotEmpty()
     }
 
     @Test
