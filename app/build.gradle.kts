@@ -37,6 +37,11 @@ android {
     buildFeatures {
         compose = true
     }
+
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
 
 dependencies {
@@ -69,5 +74,17 @@ dependencies {
     implementation (libs.libphonenumber)
 
     implementation(libs.androidx.runtime.livedata)
+
+    testImplementation(libs.junit.jupiter.api)
+    testRuntimeOnly(libs.junit.jupiter.engine)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.truth)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.junit.jupiter)
+  //  testImplementation(libs.mockito.inline)
+    testImplementation(kotlin("test"))
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.turbine)
+
 
 }

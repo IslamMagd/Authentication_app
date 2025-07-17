@@ -54,7 +54,7 @@ class LoginViewModel(private val validatePhoneNumberUseCase: ValidatePhoneNumber
 
         _state.update {
             when (phoneResult) {
-                is ValidationResult.Success -> it.copy(phoneError = null)
+                is ValidationResult.Success -> it.copy(phoneError = "")
                 is ValidationResult.Error -> it.copy(phoneError = phoneResult.message)
             }
         }
@@ -64,6 +64,8 @@ class LoginViewModel(private val validatePhoneNumberUseCase: ValidatePhoneNumber
                 _effect.send(LogInEffect.NavigateToSignUp)
             }
         }
+
+
     }
 
 }
